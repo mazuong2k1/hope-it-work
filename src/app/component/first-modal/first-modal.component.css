@@ -1,0 +1,52 @@
+.header-1 {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.header-2 {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.firstPass {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.dialog-container {
+    /* Nếu nội dung có chiều cao cố định, hãy sử dụng height thay vì flex-grow */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-primary-2 {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-right: 10%;
+    border-radius: 8px; /* Điều chỉnh giá trị để có độ cong phù hợp */
+    background-color: #007bff; /* Màu xanh da trời */
+    color: #ffffff; /* Màu trắng */
+    font-weight: bold; /* Chữ in đậm */
+    padding: 10px 20px; /* Điều chỉnh giá trị để có padding phù hợp */
+    cursor: pointer;
+  }
+  
+  .btn-primary-2:hover {
+    background-color: #0056b3; /* Màu xanh da trời đậm khi hover */
+  }
+  
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  

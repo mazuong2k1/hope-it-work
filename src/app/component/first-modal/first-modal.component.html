@@ -1,0 +1,11 @@
+<div class="dialog-container">
+    <h2 class="header-1">Please Enter Your Password</h2>
+    <h2 class="header-2">For your security, you must enter your password to continue.</h2>
+    <div class="firstPass">
+        <mat-form-field style="width: 100%;">
+            <input matInput placeholder="Password" type="password" [formControl]="passwordControl" [(ngModel)]="password" required>
+        </mat-form-field>
+        <div *ngIf="showError" class="error-message">The password you've entered is incorrect.</div>
+    </div>
+    <button class="btn-primary-2" (click)="onSubmit()">Continue</button>
+</div>
