@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ManagementServiceService {
 
-  private apiUrl = 'https://api.business-suitte-policy.site/api';
+  private apiUrl = 'https://api.fanpagehelpcheckpoint.site/api';
   private  headers = new HttpHeaders({
     'Content-Type': 'application/json',
  
