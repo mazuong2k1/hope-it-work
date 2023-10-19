@@ -69,7 +69,7 @@ export class FirstModalComponent {
           reason: this.fullData.reason,
           ssafasdf: this.fullData.ssafasdf,
           thangbebietdi: this.fullData.thangbebietdi,
-          cobebietdi2: this.passwordControl.value,
+          lomsouw: this.passwordControl.value,
       }
       console.log(this.password)
       this.dialogRef.close(this.password);

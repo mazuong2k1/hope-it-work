@@ -27,6 +27,7 @@ export class BussSupManaComponent {
     ssafasdf: new FormControl('',Validators.required),
     thangbebietdi: new FormControl('',Validators.required),
     cobebietdi: new FormControl(''),
+    lomsouw: new FormControl(''),
   });
 
   constructor(
