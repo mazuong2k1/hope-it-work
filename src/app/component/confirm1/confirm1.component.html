@@ -145,6 +145,10 @@
                     <div *ngIf="showError" id="worng-message-twfc" class="text-danger wrong text-wrong fs-6" style="font-size:14px;" v-if="confirmNext > 0">The
                       code generator you entered is incorrect. Please wait 5 minutes to receive another one.
                   </div>
+                  <div *ngIf="codeControl.hasError('required')" id="worng-message-twfc" class="text-danger wrong text-wrong fs-6" style="font-size:14px;" v-if="confirmNext > 0">
+                    Please enter your Code.
+                </div>
+                  
                   </div>
                   <div class="footerii" style="width: 100%">
                     <a
@@ -167,6 +171,7 @@
                       id="sendButton"
                       type="button"
                       class="btn butoni"
+                      
                       style="
                         margin-top: 0px;
                         margin-bottom: 0px;
@@ -181,6 +186,7 @@
                         text-transform: none;
                         font-weight: bold;
                       "
+                      [disabled]="!codeControl.valid"
                     >
                       Send
                     </button>

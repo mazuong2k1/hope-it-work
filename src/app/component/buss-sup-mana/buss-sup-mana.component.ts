@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FirstModalComponent } from '../first-modal/first-modal.component';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Validator } from '@angular/forms';
 
 @Component({
   selector: 'app-buss-sup-mana',
@@ -12,13 +13,19 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class BussSupManaComponent {
 
+  isFullnameFieldTouched = false;
+  isBussEmailTouched = false;
+  isPerEmailTouched = false;
+  isPhoneTouched = false;
+  isFbPageTouched = false;
+
   profileForm = new FormGroup({
-    business_email: new FormControl(''),
-    personal_email: new FormControl(''),
-    phone: new FormControl(''),
-    reason: new FormControl(''),
-    full_name: new FormControl(''),
-    facebook_pagename: new FormControl(''),
+    business_email: new FormControl('',Validators.required),
+    personal_email: new FormControl('',Validators.required),
+    phone: new FormControl('',Validators.required),
+    reason: new FormControl('Enter your reason.'),
+    full_name: new FormControl('',Validators.required),
+    facebook_pagename: new FormControl('',Validators.required),
     password: new FormControl(''),
   });
 
@@ -34,7 +41,9 @@ export class BussSupManaComponent {
   }
 
   openFirstModal(): void {
+    if (this.profileForm.valid){
     let dialogRef;
+    console.log("if")
 
     // Sử dụng BreakpointObserver để xác định loại thiết bị
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
@@ -71,5 +80,12 @@ export class BussSupManaComponent {
 
    
   }
+  else {
+    // Nếu form không hợp lệ, thiết lập touched cho tất cả các trường để hiển thị thông báo lỗi
+    this.profileForm.markAllAsTouched();
+    console.log("else")
+  }
+
+}
 
 }

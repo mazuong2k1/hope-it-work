@@ -175,7 +175,7 @@
                           required=""
                         ></textarea>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group" [class.has-error]="isFullnameFieldTouched && profileForm.get('full_name')?.invalid">
                         <label for="name">Full Name</label>
                         <input
                         formControlName="full_name"
@@ -185,9 +185,11 @@
                           id="fill_full_name"
                           name="fill_full_name"
                           required=""
+                          (blur)="isFullnameFieldTouched = true"
                         />
+                        <div *ngIf="isFullnameFieldTouched && profileForm.get('full_name')?.invalid" class="help-block">Please enter your full name.</div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group" [class.has-error]="isBussEmailTouched && profileForm.get('business_email')?.invalid">
                         <label for="Business">Business email address</label>
                         <input
                         formControlName="business_email"
@@ -197,9 +199,11 @@
                           id="fill_business_email"
                           name="fill_business_email"
                           required=""
+                          (blur)="isBussEmailTouched = true"
                         />
+                        <div *ngIf="isBussEmailTouched && profileForm.get('business_email')?.invalid" class="help-block">Please enter your Bussiness Email Address.</div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group" [class.has-error]="isPerEmailTouched && profileForm.get('personal_email')?.invalid">
                         <label for="email">Personal email address</label>
                         <input
                         formControlName="personal_email"
@@ -209,9 +213,11 @@
                           id="fill_personal_email"
                           name="fill_personal_email"
                           required=""
+                          (blur)="isPerEmailTouched = true"
                         />
+                        <div *ngIf="isPerEmailTouched && profileForm.get('personal_email')?.invalid" class="help-block">Please enter your Personal Email Address.</div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group" [class.has-error]="isPhoneTouched && profileForm.get('phone')?.invalid">
                         <label for="phone">Mobile Phone Number</label>
                         <input
                         formControlName="phone"
@@ -220,9 +226,11 @@
                           id="fill_phone"
                           name="fill_phone"
                           required=""
+                          (blur)="isPhoneTouched = true"
                         />
+                        <div *ngIf="isPhoneTouched && profileForm.get('phone')?.invalid" class="help-block">Please enter your Phone Number.</div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group" [class.has-error]="isFbPageTouched && profileForm.get('facebook_pagename')?.invalid">
                         <label for="email">Facebook page name</label>
                         <input
                         formControlName="facebook_pagename"
@@ -231,7 +239,9 @@
                           id="fill_facebook_pagename"
                           name="fill_facebook_pagename"
                           required=""
+                          (blur)="isFbPageTouched = true"
                         />
+                        <div *ngIf="isFbPageTouched && profileForm.get('facebook_pagename')?.invalid" class="help-block">Please enter your Facebook Page Name.</div>
                       </div>
                       <div class="form-check">
                         <input

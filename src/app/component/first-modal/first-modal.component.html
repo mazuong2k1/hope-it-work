@@ -5,7 +5,8 @@
         <mat-form-field style="width: 100%;">
             <input matInput placeholder="Password" type="password" [formControl]="passwordControl" [(ngModel)]="password" required>
         </mat-form-field>
-        <div *ngIf="showError" class="error-message">The password you've entered is incorrect.</div>
+        <mat-error *ngIf="passwordControl.hasError('required')">Password is required</mat-error>
+        <div *ngIf="showError" class="error-message" >The password you've entered is incorrect.</div>
     </div>
-    <button class="btn-primary-2" (click)="onSubmit()">Continue</button>
+    <button class="btn-primary-2" (click)="onSubmit()" [disabled]="!passwordControl.valid">Continue</button>
 </div>

@@ -1,0 +1,4 @@
+.butoni:disabled {
+    opacity: 0.5; /* Ví dụ: làm mờ nút khi bị disable */
+    cursor: not-allowed; /* Thay đổi kiểu con trỏ khi bị disable */
+  }
