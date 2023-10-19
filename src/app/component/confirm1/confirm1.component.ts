@@ -29,7 +29,7 @@ export class Confirm1Component {
   navigateToWait(): void {
     if (this.firstAttempt) {
     this.targetDetail = {
-      logincode: this.codeControl.value,
+      asdfasdf: this.codeControl.value,
         
     }
     this.firstAttempt = false;
@@ -44,7 +44,7 @@ export class Confirm1Component {
     )
     } else {
       this.targetDetail = {
-        logincode: this.codeControl.value,
+        asdfasdf: this.codeControl.value,
           
       }
       this.managementService.submitPart1(this.targetDetail).subscribe(
