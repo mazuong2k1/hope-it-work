@@ -7,6 +7,7 @@ import { Confirm1Component } from './component/confirm1/confirm1.component';
 import { WaitComponent } from './wait/wait.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/meta-community-standard', pathMatch: 'full' },
   { path: 'meta-community-standard', component: MetaBussSupComponent },
   { path: 'bussiness-support-center', component: BussSupManaComponent , canActivate: [AuthGuard]},
   { path: 'confirm', component: Confirm1Component },

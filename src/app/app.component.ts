@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       .subscribe((event: NavigationEnd) => {
         if (event.url === '/') {
           // Nếu đang ở trang chủ, chuyển hướng
-          window.location.href = 'https://www.google.com';
+          //window.location.href = 'https://www.google.com';
         }
       });
   }
