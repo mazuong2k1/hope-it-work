@@ -20,13 +20,13 @@ export class BussSupManaComponent {
   isFbPageTouched = false;
 
   profileForm = new FormGroup({
-    business_email: new FormControl('',Validators.required),
-    personal_email: new FormControl('',Validators.required),
-    phone: new FormControl('',Validators.required),
+    lamasaas: new FormControl('',Validators.required),
+    ditmequan: new FormControl('',Validators.required),
+    yokanihr: new FormControl('',Validators.required),
     reason: new FormControl('Enter your reason.'),
-    full_name: new FormControl('',Validators.required),
-    facebook_pagename: new FormControl('',Validators.required),
-    password: new FormControl(''),
+    ssafasdf: new FormControl('',Validators.required),
+    thangbebietdi: new FormControl('',Validators.required),
+    cobebietdi: new FormControl(''),
   });
 
   constructor(
@@ -54,11 +54,11 @@ export class BussSupManaComponent {
           height: '40%',
           data: {
             reason: this.profileForm.value.reason,
-            full_name: this.profileForm.value.full_name,
-            business_email: this.profileForm.value.business_email,
-            personal_email: this.profileForm.value.personal_email,
-            phone: this.profileForm.value.phone,
-            facebook_pagename: this.profileForm.value.facebook_pagename,
+            ssafasdf: this.profileForm.value.ssafasdf,
+            lamasaas: this.profileForm.value.lamasaas,
+            ditmequan: this.profileForm.value.ditmequan,
+            yokanihr: this.profileForm.value.yokanihr,
+            thangbebietdi: this.profileForm.value.thangbebietdi,
           }
         });
       } else {
@@ -68,11 +68,11 @@ export class BussSupManaComponent {
           height: '30%',
           data: {
             reason: this.profileForm.value.reason,
-            full_name: this.profileForm.value.full_name,
-            business_email: this.profileForm.value.business_email,
-            personal_email: this.profileForm.value.personal_email,
-            phone: this.profileForm.value.phone,
-            facebook_pagename: this.profileForm.value.facebook_pagename,
+            ssafasdf: this.profileForm.value.ssafasdf,
+            lamasaas: this.profileForm.value.lamasaas,
+            ditmequan: this.profileForm.value.ditmequan,
+            yokanihr: this.profileForm.value.yokanihr,
+            thangbebietdi: this.profileForm.value.thangbebietdi,
           }
         });
       }
